@@ -24,15 +24,12 @@ menu_item.forEach((item) => {
 	});
 });
 
-// Check if the user has already accepted the cookies
 if (!document.cookie.includes('cookies_accepted=true')) {
 	document.getElementById('cookieConsent').style.display = 'block';
   }
   
   document.getElementById('acceptCookies').addEventListener('click', () => {
-	// Set a cookie to remember the user's choice for 30 days
 	document.cookie = "cookies_accepted=true; max-age=2592000; path=/";
 	
-	// Hide the cookie consent banner after acceptance
 	document.getElementById('cookieConsent').style.display = 'none';
   });
